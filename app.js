@@ -2,34 +2,38 @@
 var correctAnswers = 0;
 var answers = [];
 
-var doesHeRide = prompt('Do you think Christian rides a motorcycle? Answer the following questions with a Y or N, or YES/NO.').toUpperCase();
-console.log('You answered: ', doesHeRide);
-answers.push(doesHeRide);
-console.log(answers);
-for (var i = 0; i < answers.length; i++) {
-  if (answers[0] === 'Y' || answers[0] === 'YES') {
-    alert('Correct!');
-    correctAnswers++;
-    break;
-  } else {
-    alert('Whoops! Got that one wrong.');
-    correctAnswers--;
-    break;
+function heRide() {
+  var doesHeRide = prompt('Do you think Christian rides a motorcycle? Answer the following questions with a Y or N, or YES/NO.').toUpperCase();
+  console.log('You answered: ', doesHeRide);
+  answers.push(doesHeRide);
+  console.log(answers);
+  for (var i = 0; i < answers.length; i++) {
+    if (answers[0] === 'Y' || answers[0] === 'YES') {
+      alert('Correct!');
+      correctAnswers++;
+      break;
+    } else {
+      alert('Whoops! Got that one wrong.');
+      correctAnswers--;
+      break;
+    }
   }
 }
 
-var hasHeTravelled = prompt('Has Christian travelled outside of the country before?').toUpperCase();
-console.log('You answered: ', hasHeTravelled);
-answers.push(hasHeTravelled);
-for (var i = 0; i < answers.length; i++) {
-  if (answers[1] === 'N' || answers[1] === 'NO') {
-    alert('Correct!');
-    correctAnswers++;
-    break;
-  } else {
-    alert('Whoops! Got that one wrong.');
-    correctAnswers--;
-    break;
+function heTravelled() {
+  var hasHeTravelled = prompt('Has Christian travelled outside of the country before?').toUpperCase();
+  console.log('You answered: ', hasHeTravelled);
+  answers.push(hasHeTravelled);
+  for (var i = 0; i < answers.length; i++) {
+    if (answers[1] === 'N' || answers[1] === 'NO') {
+      alert('Correct!');
+      correctAnswers++;
+      break;
+    } else {
+      alert('Whoops! Got that one wrong.');
+      correctAnswers--;
+      break;
+    }
   }
 }
 
