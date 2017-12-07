@@ -1,74 +1,100 @@
 'use strict';
 var correctAnswers = 0;
+var answers = [];
 
-var answers.toUpperCase() = [doesHeRide, hasHeTravelled, hasHeRan, jobExperience, videoGames];
-
-var doesHeRide.toUpperCase() = prompt('Do you think Christian rides a motorcycle? Answer the following questions with a Y or N, or YES/NO.');
+var doesHeRide = prompt('Do you think Christian rides a motorcycle? Answer the following questions with a Y or N, or YES/NO.').toUpperCase();
 console.log('You answered: ', doesHeRide);
-
-var hasHeTravelled.toUpperCase() = prompt('Has Christian travelled outside of the country before?');
-console.log('You answered: ', hasHeTravelled);
-
-var hasHeRan.toUpperCase() = prompt('Has Christian competed in state for his 4x100 relay team?')
-console.log('You answered: ', hasHeRan);
-
-var jobExperience.toUpperCase() = prompt('Do you think Christian worked at Whole Foods for two years before starting school?');
-console.log('You answered: ', jobExperience);
-
-var videoGames.toUpperCase() = prompt('Do you think Christian plays too many video games?');
-console.log('You answered: ' videoGames);
-
-
+answers.push(doesHeRide);
+console.log(answers);
 for (var i = 0; i < answers.length; i++) {
-    console.log(answers);
+  if (answers[0] === 'Y' || answers[0] === 'YES') {
+    alert('Correct!');
+    correctAnswers++;
+    break;
+  } else {
+    alert('Whoops! Got that one wrong.');
+    correctAnswers--;
+    break;
+  }
 }
 
-if (answers[0] === 'Y' || answers[0] === 'YES') {
-  alert('Correct! He does.');
-  correctAnswers++
-} else {
-  alert('Whoops! Got that one wrong.');
-  correctAnswers--
+var hasHeTravelled = prompt('Has Christian travelled outside of the country before?').toUpperCase();
+console.log('You answered: ', hasHeTravelled);
+answers.push(hasHeTravelled);
+for (var i = 0; i < answers.length; i++) {
+  if (answers[1] === 'N' || answers[1] === 'NO') {
+    alert('Correct!');
+    correctAnswers++;
+    break;
+  } else {
+    alert('Whoops! Got that one wrong.');
+    correctAnswers--;
+    break;
+  }
 }
 
-if (answers[1] === 'Y' || answers[1] === 'YES') {
-  alert('Nope, he hasn\'t.');
-  correctAnswers--
-} else {
-  alert ('Correct! He hasn\'t.');
-  correctAnswers++
+var hasHeRan = prompt('Has Christian competed in state for his 4x100 relay team?').toUpperCase();
+console.log('You answered: ', hasHeRan);
+answers.push(hasHeRan);
+for (var i = 0; i < answers.length; i++) {
+  if (answers[2] === 'N' || answers[2] === 'NO') {
+    alert('Correct!');
+    correctAnswers++;
+    break;
+  } else {
+    alert('Whoops! Got that one wrong.');
+    correctAnswers--;
+    break;
+  }
 }
 
-if (answers[2] === 'Y' || answers[2] === 'YES') {
-  alert('He has not, but his relay team was 1 placement away from state. Close!');
-  correctAnswers--
-} else {
-  alert('Correct, but they were close!');
-  correctAnswers++
+var jobExperience = prompt('Do you think Christian worked at Whole Foods for two years before starting school?').toUpperCase();
+console.log('You answered: ', jobExperience);
+answers.push(jobExperience);
+for (var i = 0; i < answers.length; i++) {
+  if (answers[3] === 'Y' || answers[3] === 'YES') {
+    alert('Correct!');
+    correctAnswers++;
+    break;
+  } else {
+    alert('Whoops! Got that one wrong.');
+    correctAnswers--;
+    break;
+  }
 }
 
-if (answers[3] === 'Y' || answers[3] === 'YES') {
-  alert('Correct! He did.');
-  correctAnswers++
-} else {
-  alert('Incorrect! He did.');
-  correctAnswers--
+var videoGames = prompt('Do you think Christian plays too many video games?').toUpperCase();
+console.log('You answered: ', videoGames);
+answers.push(videoGames);
+for (var i = 0; i < answers.length; i++) {
+  if (answers[4] === 'Y' || answers[4] === 'YES') {
+    alert('Correct!');
+    correctAnswers++;
+    break;
+  } else {
+    alert('Whoops! Got that one wrong.');
+    correctAnswers--;
+    break;
+  }
 }
 
-if (answers[4] === 'Y' || answers[4] === 'YES') {
-  alert('You\'re right, Christian definitely plays too many video games.');
-  correctAnswers++
-} else {
-  alert('Nope, he definitely does.');
-  correctAnswers--
-}
 
+
+
+var numberOfGuesses = 0;
 var favoriteNumber = prompt('What is Christian\'s favorite number?');
+var numberYouGuessed = parseInt(favoriteNumber);
 console.log('You answered: ', favoriteNumber);
-if (favoriteNumber === 7) {
+while (numberOfGuesses <= 4) {
+if (numberYouGuessed === 7) {
   alert('Lucky number!');
-} else if (favoriteNumber > 10) {
-  alert('Think lower.')
-} 
+} else if (numberYouGuessed > 7) {
+  alert('Think lower, it\'s a lucky number.');
+} else if (numberYouGuessed < 7) {
+  alert('Think a little higher than that!');
+} else {
+  alert('That\'s not a number.');
+  }
+}
 
 console.log('You got ', correctAnswers, ' answers correct.');
