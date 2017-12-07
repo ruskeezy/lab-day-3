@@ -91,13 +91,13 @@ if (numberYouGuessed === 7) {
   break;
 } else if (numberYouGuessed > 7) {
   alert('Think lower, it\'s a lucky number.');
-  break;
+  numberOfGuesses++
 } else if (numberYouGuessed < 7) {
   alert('Think a little higher than that!');
-  break;
+  numberOfGuesses++
 } else {
   alert('That\'s not a number.');
-  break;
+  numberOfGuesses++
   }
 }
 
@@ -112,6 +112,6 @@ while (statesGuessed <= 6) {
     break;
   } else {
     alert('Sorry! You didn\'t get it. Maybe next time.');
-    break;
+    statesGuessed++
   }
 }
