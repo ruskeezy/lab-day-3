@@ -82,22 +82,23 @@ for (var i = 0; i < answers.length; i++) {
 
 
 var numberOfGuesses = 0;
-var favoriteNumber = prompt('What is Christian\'s favorite number?');
-var numberYouGuessed = parseInt(favoriteNumber);
+
 console.log('You answered: ', favoriteNumber);
 while (numberOfGuesses <= 4) {
+  // var favoriteNumber = prompt('What is Christian\'s favorite number?');
+  var numberYouGuessed = parseInt(prompt('What is Christian\'s favorite number?'));
 if (numberYouGuessed === 7) {
   alert('Lucky number!');
   break;
 } else if (numberYouGuessed > 7) {
   alert('Think lower, it\'s a lucky number.');
-  numberOfGuesses++
+  numberOfGuesses++;
 } else if (numberYouGuessed < 7) {
   alert('Think a little higher than that!');
-  numberOfGuesses++
+  numberOfGuesses++;
 } else {
   alert('That\'s not a number.');
-  numberOfGuesses++
+  numberOfGuesses++;
   }
 }
 
@@ -105,13 +106,13 @@ console.log('You got ', correctAnswers, ' answers correct.');
 
 var statesLived = ['New Hampshire'];
 var statesGuessed = 0;
-var statesQuestion = prompt('Can you guess which states Christian has lived in?');
 while (statesGuessed <= 6) {
+  var statesQuestion = prompt('Can you guess which states Christian has lived in?');
   if (statesLived === 'New Hampshire') {
     alert('You got it! That\'s the only other state i\'ve lived in.');
     break;
   } else {
     alert('Sorry! You didn\'t get it. Maybe next time.');
-    statesGuessed++
+    statesGuessed++;
   }
 }
