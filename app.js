@@ -88,13 +88,30 @@ console.log('You answered: ', favoriteNumber);
 while (numberOfGuesses <= 4) {
 if (numberYouGuessed === 7) {
   alert('Lucky number!');
+  break;
 } else if (numberYouGuessed > 7) {
   alert('Think lower, it\'s a lucky number.');
+  break;
 } else if (numberYouGuessed < 7) {
   alert('Think a little higher than that!');
+  break;
 } else {
   alert('That\'s not a number.');
+  break;
   }
 }
 
 console.log('You got ', correctAnswers, ' answers correct.');
+
+var statesLived = ['New Hampshire'];
+var statesGuessed = 0;
+var statesQuestion = prompt('Can you guess which states Christian has lived in?');
+while (statesGuessed <= 6) {
+  if (statesLived === 'New Hampshire') {
+    alert('You got it! That\'s the only other state i\'ve lived in.');
+    break;
+  } else {
+    alert('Sorry! You didn\'t get it. Maybe next time.');
+    break;
+  }
+}
