@@ -127,5 +127,12 @@ function heLives() {
   }
 }
 
-heRan()
+// heRide();
+// heTravelled();
+// heRan();
+// jobz();
+// gamez();
+// favNum();
+// heLives();
+
 console.log('You got ', correctAnswers, ' answers correct.');
