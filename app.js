@@ -127,12 +127,12 @@ function heLives() {
   }
 }
 
-// heRide();
-// heTravelled();
-// heRan();
-// jobz();
-// gamez();
-// favNum();
-// heLives();
+heRide();
+heTravelled();
+heRan();
+jobz();
+gamez();
+favNum();
+heLives();
 
 console.log('You got ', correctAnswers, ' answers correct.');
